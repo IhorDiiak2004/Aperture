@@ -1,0 +1,14 @@
+
+.container_header{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.30px solid rgba(70, 163, 88, 0.5);
+}
+
+.container_header .list{
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
