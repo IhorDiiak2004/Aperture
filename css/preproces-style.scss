@@ -1,4 +1,14 @@
-
+@font-face {
+    font-family: 'poppinsregular';
+    src: url('../fonts/poppins-regular-webfont.eot');
+    src: url('../fonts/poppins-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/poppins-regular-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-regular-webfont.woff') format('woff'),
+         url('../fonts/poppins-regular-webfont.ttf') format('truetype'),
+         url('../fonts/poppins-regular-webfont.svg#poppinsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
   margin: 0;
@@ -25,12 +35,13 @@ header {
 
     .list {
       display: flex;
-      gap: 15px;
+      gap: 10px;
       list-style: none;
-      margin-left: 320px;
-
+      margin-left: 220px;
+      
       li {
         .words {
+          font-family: 'poppinsregular';
           font-weight: 400;
           font-size: 15px;
           line-height: 133%;
@@ -63,11 +74,12 @@ header {
 
   .banner-text {
     position: absolute;
-    bottom: 70px;
-    left: 435px;
+    bottom: 60px;
+    left: 375px;
     text-align: center;
 
     .subtitle {
+      font-family: 'poppinsregular';
       font-weight: 400;
       font-size: 14px;
       line-height: 143%;
@@ -77,6 +89,7 @@ header {
     }
 
     .title {
+      font-family: 'poppinsregular';
       font-weight: 400;
       font-size: 54px;
       line-height: 110%;
@@ -85,6 +98,7 @@ header {
     }
 
     .description {
+      font-family: 'poppinsregular';
       font-weight: 400;
       font-size: 14px;
       line-height: 143%;
@@ -96,15 +110,16 @@ header {
     position: absolute;
     display: flex;
     gap: 12px;
-    bottom: 36px;
-    right: 30px;
+    bottom: 29px;
+    right: 35px;
 
     .info-row {
       display: flex;
       align-items: center;
-      gap: 7px;
+      gap: 6px;
 
       p {
+        font-family: 'poppinsregular';
         font-weight: 400;
         font-size: 12px;
         line-height: 100%;
