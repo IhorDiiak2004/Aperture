@@ -5,6 +5,23 @@
   font-weight: normal;
   font-style: normal;
 }
+@keyframes bounceLogo {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,29 +29,37 @@
 }
 
 header {
-  background-color: #181818;
-  padding: 30px 152px;
-  height: 90px;
   position: fixed;
   z-index: 101;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
 }
 header .container_header {
-  max-width: 1200px;
+  background-color: #181818;
+  max-width: 1440px;
   margin: auto;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+header .container_header .main_logo {
+  margin-left: 80px;
+}
+header .container_header .main_logo:hover {
+  animation: bounceLogo 1s ease;
+  animation-iteration-count: infinite;
+}
 header .container_header .list {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   list-style: none;
-  margin-left: 220px;
+  margin-right: 50px;
 }
 header .container_header .list li .words {
+  display: inline-block;
   font-family: "poppinsregular";
   font-weight: 400;
   font-size: 15px;
@@ -47,22 +72,32 @@ header .container_header .list li .words {
   transition: 0.5s;
 }
 header .container_header .list li .words:hover {
+  font-weight: 700;
   background: #fff;
   color: #000;
+  transform: scale(1.07);
 }
 
 .banner {
   position: relative;
 }
+.banner .main_container {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
 .banner img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 .banner .banner-text {
   position: absolute;
   bottom: 60px;
-  left: 375px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
 }
 .banner .banner-text .subtitle {
@@ -112,19 +147,20 @@ header .container_header .list li .words:hover {
 .content_grid {
   background: #000;
   max-width: 1440px;
+  margin: auto;
 }
-
 .content_grid h4 {
-  padding-top: 113px;
+  font-family: "poppinsregular";
   font-weight: 400;
   font-size: 40px;
   line-height: 105%;
   text-align: center;
   color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
+  padding-top: 110px;
 }
-
 .content_grid p {
+  font-family: "poppinsregular";
   font-weight: 400;
   font-size: 23px;
   line-height: 130%;
@@ -132,31 +168,26 @@ header .container_header .list li .words:hover {
   color: #c0c0c0;
   margin-bottom: 42px;
 }
-
-.content_images {
+.content_grid .content_images {
   display: flex;
-  margin-left: 82px;
+  justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
 }
-
-.blog_card {
+.content_grid .content_images .blog_card {
   position: relative;
 }
-
-.blog_card img {
-  max-width: 576px;
+.content_grid .content_images .blog_card img {
+  width: 576px;
   display: block;
 }
-
-.overlay_text {
+.content_grid .content_images .blog_card .overlay_text {
   position: absolute;
-  bottom: 0;
-  padding: 30px;
-  margin-top: 10px;
+  bottom: 30px;
+  left: 30px;
 }
-
-.overlay_text h5 {
+.content_grid .content_images .blog_card .overlay_text h5 {
+  font-family: "poppinsregular";
   font-weight: 400;
   font-size: 14px;
   line-height: 143%;
@@ -165,11 +196,36 @@ header .container_header .list li .words:hover {
   color: #fff;
   margin-bottom: 8px;
 }
-
-.overlay_text p {
+.content_grid .content_images .blog_card .overlay_text p {
+  font-family: "poppinsregular";
   font-weight: 400;
   font-size: 14px;
   line-height: 143%;
   color: #c0c0c0;
   text-align: start;
+  margin-bottom: 17px;
+}
+.content_grid .content_images .blog_card .overlay_text .read_more {
+  width: 143px;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 5px;
+  padding-right: 13px;
+  text-decoration: none;
+  border: none;
+  border-radius: 14px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133%;
+  letter-spacing: 0.03em;
+  color: #000;
+  font-family: "poppinsregular";
+  transition: 0.5s;
+}
+.content_grid .content_images .blog_card .overlay_text .read_more:hover {
+  transform: scale(1.1);
+  font-weight: 700;
 }/*# sourceMappingURL=preproces-style.css.map */
