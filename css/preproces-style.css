@@ -30,10 +30,10 @@
 
 header {
   position: fixed;
-  z-index: 101;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
 }
 header .container_header {
   background-color: #181818;
@@ -78,14 +78,13 @@ header .container_header .list li .words:hover {
   transform: scale(1.07);
 }
 
-.banner {
-  position: relative;
-}
 .banner .main_container {
   max-width: 1440px;
   margin: auto;
   display: flex;
   align-items: center;
+  padding-top: 98px;
+  position: relative;
 }
 .banner img {
   width: 100%;
@@ -95,7 +94,7 @@ header .container_header .list li .words:hover {
 }
 .banner .banner-text {
   position: absolute;
-  bottom: 60px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -127,9 +126,9 @@ header .container_header .list li .words:hover {
 .banner .info-container {
   position: absolute;
   display: flex;
-  gap: 12px;
+  gap: 15px;
   bottom: 29px;
-  right: 35px;
+  right: 40px;
 }
 .banner .info-container .info-row {
   display: flex;
@@ -173,6 +172,7 @@ header .container_header .list li .words:hover {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
+  padding-bottom: 100px;
 }
 .content_grid .content_images .blog_card {
   position: relative;
@@ -228,4 +228,62 @@ header .container_header .list li .words:hover {
 .content_grid .content_images .blog_card .overlay_text .read_more:hover {
   transform: scale(1.1);
   font-weight: 700;
+}
+
+.banner_second .image_container {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.banner_second img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.banner_second .banner_second-text {
+  position: absolute;
+  bottom: 230px;
+  right: 62px;
+  text-align: center;
+}
+.banner_second .banner_second-text .title_second {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: start;
+  margin-bottom: 3px;
+}
+.banner_second .banner_second-text .description_Sunset {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #c0c0c0;
+  text-align: start;
+}
+.banner_second .info-container_second {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  bottom: 40px;
+  right: 40px;
+}
+.banner_second .info-container_second .info-row_second {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.banner_second .info-container_second .info-row_second p {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #fff;
 }/*# sourceMappingURL=preproces-style.css.map */
