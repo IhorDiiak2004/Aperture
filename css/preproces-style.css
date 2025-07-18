@@ -29,34 +29,30 @@
 }
 
 header {
+  background-color: #181818;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 11;
 }
 header .container_header {
-  background-color: #181818;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: auto;
-  padding: 30px;
+  padding: 30px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .container_header .main_logo {
-  margin-left: 80px;
-}
-header .container_header .main_logo:hover {
+header .container_header a img:hover {
   animation: bounceLogo 1s ease;
   animation-iteration-count: infinite;
 }
 header .container_header .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 32px;
   list-style: none;
-  margin-right: 50px;
 }
 header .container_header .list li .words {
   display: inline-block;
@@ -66,7 +62,7 @@ header .container_header .list li .words {
   line-height: 133%;
   color: #fff;
   text-decoration: none;
-  padding: 9px 20px;
+  padding: 9px 13px;
   border-radius: 14px;
   white-space: nowrap;
   transition: 0.5s;
@@ -78,26 +74,23 @@ header .container_header .list li .words:hover {
   transform: scale(1.07);
 }
 
-.banner .main_container {
-  max-width: 1440px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  padding-top: 98px;
+.banner {
+  background-image: url("../images/IMAGE-1.png");
+  height: 716px;
   position: relative;
 }
-.banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+.banner .main_container {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  justify-content: center;
 }
 .banner .banner-text {
-  position: absolute;
-  bottom: 70px;
-  left: 50%;
-  transform: translateX(-50%);
   text-align: center;
+  padding-bottom: 65px;
 }
 .banner .banner-text .subtitle {
   font-family: "poppinsregular";
@@ -126,9 +119,10 @@ header .container_header .list li .words:hover {
 .banner .info-container {
   position: absolute;
   display: flex;
-  gap: 15px;
-  bottom: 29px;
-  right: 40px;
+  gap: 17px;
+  bottom: 35px;
+  right: -25px;
+  list-style: none;
 }
 .banner .info-container .info-row {
   display: flex;
@@ -143,12 +137,14 @@ header .container_header .list li .words:hover {
   color: #fff;
 }
 
-.content_grid {
+.content_page {
   background: #000;
-  max-width: 1440px;
+}
+.content_page .content_grid {
+  max-width: 1200px;
   margin: auto;
 }
-.content_grid h4 {
+.content_page .content_grid h4 {
   font-family: "poppinsregular";
   font-weight: 400;
   font-size: 40px;
@@ -158,7 +154,7 @@ header .container_header .list li .words:hover {
   margin-bottom: 13px;
   padding-top: 110px;
 }
-.content_grid p {
+.content_page .content_grid p {
   font-family: "poppinsregular";
   font-weight: 400;
   font-size: 23px;
@@ -167,26 +163,26 @@ header .container_header .list li .words:hover {
   color: #c0c0c0;
   margin-bottom: 42px;
 }
-.content_grid .content_images {
+.content_page .content_grid .content_images {
   display: flex;
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
   padding-bottom: 100px;
 }
-.content_grid .content_images .blog_card {
+.content_page .content_grid .content_images .blog_card {
   position: relative;
 }
-.content_grid .content_images .blog_card img {
-  width: 576px;
+.content_page .content_grid .content_images .blog_card img {
+  width: 100%;
   display: block;
 }
-.content_grid .content_images .blog_card .overlay_text {
+.content_page .content_grid .content_images .blog_card .overlay_text {
   position: absolute;
   bottom: 30px;
   left: 30px;
 }
-.content_grid .content_images .blog_card .overlay_text h5 {
+.content_page .content_grid .content_images .blog_card .overlay_text h5 {
   font-family: "poppinsregular";
   font-weight: 400;
   font-size: 14px;
@@ -196,7 +192,7 @@ header .container_header .list li .words:hover {
   color: #fff;
   margin-bottom: 8px;
 }
-.content_grid .content_images .blog_card .overlay_text p {
+.content_page .content_grid .content_images .blog_card .overlay_text p {
   font-family: "poppinsregular";
   font-weight: 400;
   font-size: 14px;
@@ -205,7 +201,7 @@ header .container_header .list li .words:hover {
   text-align: start;
   margin-bottom: 17px;
 }
-.content_grid .content_images .blog_card .overlay_text .read_more {
+.content_page .content_grid .content_images .blog_card .overlay_text .read_more {
   width: 143px;
   background: #fff;
   display: inline-flex;
@@ -225,29 +221,30 @@ header .container_header .list li .words:hover {
   font-family: "poppinsregular";
   transition: 0.5s;
 }
-.content_grid .content_images .blog_card .overlay_text .read_more:hover {
-  transform: scale(1.1);
+.content_page .content_grid .content_images .blog_card .overlay_text .read_more:hover {
+  transform: scale(1.05);
   font-weight: 700;
 }
 
-.banner_second .image_container {
-  max-width: 1440px;
-  margin: auto;
-  display: flex;
-  align-items: center;
+.banner_second {
+  background-image: url("../images/IMAGE (10).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
   position: relative;
 }
-.banner_second img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+.banner_second .image_container {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  position: relative;
+  justify-content: end;
+  align-items: center;
 }
 .banner_second .banner_second-text {
-  position: absolute;
-  bottom: 230px;
-  right: 62px;
-  text-align: center;
+  text-align: left;
 }
 .banner_second .banner_second-text .title_second {
   font-family: "poppinsregular";
@@ -257,23 +254,22 @@ header .container_header .list li .words:hover {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #fff;
-  text-align: start;
   margin-bottom: 3px;
 }
-.banner_second .banner_second-text .description_Sunset {
+.banner_second .banner_second-text .description_sunset {
   font-family: "poppinsregular";
   font-weight: 400;
   font-size: 14px;
   line-height: 143%;
   color: #c0c0c0;
-  text-align: start;
 }
 .banner_second .info-container_second {
   position: absolute;
   display: flex;
   gap: 15px;
-  bottom: 40px;
-  right: 40px;
+  bottom: 35px;
+  right: -25px;
+  list-style: none;
 }
 .banner_second .info-container_second .info-row_second {
   display: flex;
@@ -281,6 +277,260 @@ header .container_header .list li .words:hover {
   gap: 5px;
 }
 .banner_second .info-container_second .info-row_second p {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.gear_section {
+  background-color: #000;
+}
+.gear_section .gear_container {
+  display: flex;
+  width: 100%;
+}
+.gear_section .gear_left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gear_section .gear_text {
+  display: flex;
+  flex-direction: column;
+}
+.gear_section .gear_text .gear_subtitle {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c0c0c0;
+  margin-bottom: 6px;
+}
+.gear_section .gear_text .gear_title {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 114%;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.gear_section .gear_text .gear_description {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.gear_section .gear_text .gear_button {
+  width: 152px;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 5px;
+  padding-right: 10px;
+  text-decoration: none;
+  border: none;
+  border-radius: 14px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 125%;
+  letter-spacing: 0.03em;
+  color: #000;
+  font-family: "poppinsregular";
+  transition: 0.5s;
+}
+.gear_section .gear_text .gear_button:hover {
+  transform: scale(1.05);
+  font-weight: 700;
+}
+.gear_section .gear_image {
+  height: 540px;
+  position: relative;
+  width: 50%;
+  background-image: url("../images/IMAGE (11).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.gear_section .gear_image .info-container_first {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  bottom: 35px;
+  right: 35px;
+  list-style: none;
+}
+.gear_section .gear_image .info-container_first .info-row_first {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.gear_section .gear_image .info-container_first .info-row_first p {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.banner_third {
+  background-image: url("../images/IMAGE (12).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  position: relative;
+}
+.banner_third .image_container {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  position: relative;
+  justify-content: end;
+  align-items: center;
+}
+.banner_third .banner_third-text {
+  text-align: left;
+}
+.banner_third .banner_third-text .title_third {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 3px;
+}
+.banner_third .banner_third-text .description_monstera {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #c0c0c0;
+}
+.banner_third .info-container_third {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  bottom: 35px;
+  right: -25px;
+  list-style: none;
+}
+.banner_third .info-container_third .info-row_third {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.banner_third .info-container_third .info-row_third p {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.clients_section {
+  background-color: #000;
+}
+.clients_section .clients_container {
+  max-width: 1200px;
+  margin: auto;
+}
+.clients_section .clients_title {
+  text-align: center;
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 105%;
+  color: #fff;
+  margin-bottom: 15px;
+  padding-top: 113px;
+}
+.clients_section .clients_subtitle {
+  text-align: center;
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 125%;
+  color: #c0c0c0;
+  margin-bottom: 80px;
+}
+.clients_section .clients_logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 140px;
+}
+.clients_section .clients_logos img {
+  object-fit: contain;
+  transition: 0.5s;
+}
+.clients_section .clients_logos img:hover {
+  transform: scale(1.05);
+}
+
+.banner_himalayas {
+  background-image: url("../images/IMAGE (18).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  position: relative;
+}
+.banner_himalayas .image_container {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  position: relative;
+  justify-content: end;
+  align-items: center;
+}
+.banner_himalayas .banner_himalayas-text {
+  text-align: left;
+}
+.banner_himalayas .banner_himalayas-text .title_himalayas {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 3px;
+}
+.banner_himalayas .banner_himalayas-text .description_himalayas {
+  font-family: "poppinsregular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #c0c0c0;
+}
+.banner_himalayas .info-container_himalayas {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  bottom: 35px;
+  right: -25px;
+  list-style: none;
+}
+.banner_himalayas .info-container_himalayas .info-row_himalayas {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.banner_himalayas .info-container_himalayas .info-row_himalayas p {
   font-family: "poppinsregular";
   font-weight: 400;
   font-size: 12px;
